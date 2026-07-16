@@ -9,3 +9,5 @@ Recent advances in AI have made it possible to deobfuscate even some of the stro
 Chimera aims to make this significantly more difficult by implementing protection techniques that AI models struggle to reason about statically, encouraging or requiring runtime analysis instead. While this is unlikely to make deobfuscation impossible, it can substantially increase the time and effort required.
 
 > **Note:** Chimera V1 is not yet publicly released. Once development is complete, it will be superseded by Chimera V2, which is intended to address the architectural limitations and shortcomings identified in V1.
+
+This is designed as an anti-deobfuscation obfuscator, not anti-cracking. Your code can still be cracked. 
