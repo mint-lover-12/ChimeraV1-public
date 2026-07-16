@@ -22,3 +22,9 @@ Future versions will refine this approach:
 * **Chimera V3** will aim to combine the strongest security properties of V1 with the performance and engineering improvements introduced in V2.
 
 > **Note:** Chimera V1 is not yet publicly released. Once development is complete, it will be superseded by Chimera V2, which is intended to address the architectural limitations and shortcomings identified in V1.
+
+
+## The Truth
+
+Realistically, we will never have an AI-proof obfuscator. This is a pet project which i'm doing for fun. If it does end up working then it wont be for long. AI is genuinely too good at this stuff. The idea is to make the code so fucked up that an AI cant really 'pattern match' it to anything, but it hits a point where it can just reverse it. 
+The perfect Anti-AI obfuscator would trick it to pattern match the program into something that its not - which is another side project I have. It will not be released. Ever. (it works too well)
