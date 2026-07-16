@@ -11,3 +11,4 @@ Chimera aims to make this significantly more difficult by implementing protectio
 > **Note:** Chimera V1 is not yet publicly released. Once development is complete, it will be superseded by Chimera V2, which is intended to address the architectural limitations and shortcomings identified in V1.
 
 This is designed as an anti-deobfuscation obfuscator, not anti-cracking. Your code can still be cracked. 
+Chimera doesn't contain any normal obfuscation, so I heavily recommend using it with another obfuscator. 
