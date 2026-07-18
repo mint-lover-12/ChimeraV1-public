@@ -48,3 +48,8 @@ Upon completing 13.1, the AI had to run the test file to be able to deobfuscate 
   4 FAILED
 
   It took it about 27 minutes to deobfuscate, which is wonderful, as this is a tiny file and the obf isnt even fully finished! It also told me stuff was leaking into the constant pool which made it far easier to deobf.
+| Version | Runtime Required | Outcome |
+|---------|------------------|---------|
+| 12.0 |  No | Successfully deobfuscated |
+| 13.0 |  Yes | Successfully deobfuscated |
+| 13.1 |  Yes | Failed validation tests after ~27 minutes, had to manually reconstruct stuff |
