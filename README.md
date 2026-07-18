@@ -35,7 +35,7 @@ The perfect Anti-AI obfuscator would trick it to pattern match the program into 
 This wont make sense to people who dont have the plan, and is mainly for me.
 Upon completing 13.1, the AI had to run the test file to be able to deobfuscate it, and took significantly more time than all of the previous tests. This is a ridiculous improvement, and it suggests that an entire anti-AI obfuscator is plausible and possible. The JAR runs very fast, and the AI seems to be struggling and potentially losing context. For reference, the JAR just does some math and prints it to the console! Upon partially deobfuscating it (23 minutes), it FAILED to correctly do it:
   [FAIL] factorial(5) expected 24 but got 120
-  [FAIL] factorial(10) expected 362880 but got 3628800
+  [FAIL] factorial(10) expected 362880 but got 3628800   (as you can see, these are incorrect. This is because my factorial was offset, meaning that the AI tried to manually build a factorial function)
   [FAIL] megatest expected 2044257076 but got 833783078
   3 FAILED
 
