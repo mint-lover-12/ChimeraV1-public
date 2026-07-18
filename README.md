@@ -53,3 +53,11 @@ Upon completing 13.1, the AI had to run the test file to be able to deobfuscate 
 | 12.0 |  No | Successfully deobfuscated |
 | 13.0 |  Yes | Successfully deobfuscated |
 | 13.1 |  Yes | Failed validation tests after ~27 minutes, had to manually reconstruct stuff |
+
+```mermaid
+xychart-beta
+    title "Approximate AI Deobfuscation Time"
+    x-axis "Chimera Version" ["12.0", "13.0", "13.1"]
+    y-axis "Minutes" 0 --> 30
+    line "GLM 5.2" [4, 12, 27]
+```
