@@ -28,3 +28,23 @@ Future versions will refine this approach:
 
 Realistically, we will never have an AI-proof obfuscator. This is a pet project which i'm doing for fun. If it does end up working then it wont be for long. AI is genuinely too good at this stuff. The idea is to make the code so fucked up that an AI cant really 'pattern match' it to anything, but it hits a point where it can just reverse it. 
 The perfect Anti-AI obfuscator would trick it to pattern match the program into something that its not - which is another side project I have. It will not be released. Ever. (it works too well)
+
+
+## Notes
+#### all tests done on GLM 5.2, which is ~opus 4.8 -> fable 5 level
+This wont make sense to people who dont have the plan, and is mainly for me.
+Upon completing 13.1, the AI had to run the test file to be able to deobfuscate it, and took significantly more time than all of the previous tests. This is a ridiculous improvement, and it suggests that an entire anti-AI obfuscator is plausible and possible. The JAR runs very fast, and the AI seems to be struggling and potentially losing context. For reference, the JAR just does some math and prints it to the console! Upon partially deobfuscating it (23 minutes), it FAILED to correctly do it:
+  [FAIL] factorial(5) expected 24 but got 120
+  [FAIL] factorial(10) expected 362880 but got 3628800
+  [FAIL] megatest expected 2044257076 but got 833783078
+  3 FAILED
+
+  This was actually pretty funny. 
+  It then attempted to fix it and got:
+  [FAIL] sumTo(1) expected 1 but got 0
+  [FAIL] sumTo(10) expected 55 but got 45
+  [FAIL] sumTo(100) expected 5050 but got 4950
+  [FAIL] megatest expected 2044257076 but got 738442118
+  4 FAILED
+
+  It took it about 27 minutes to deobfuscate, which is wonderful, as this is a tiny file and the obf isnt even fully finished! It also told me stuff was leaking into the constant pool which made it far easier to deobf.
