@@ -74,3 +74,7 @@ xychart-beta
 ```
 
 Upon completing Stage 13 of the plan, we notice a change in AI movement. Rather than deobfuscating the file, it initially 'fakes' a deobfuscation, by messing with some code and saying its finished. It is still capable of partial deobfuscation, but it is much more resistant, which is interesting. I also made the tests so you are unable to reconstruct them easily, which has ramped up the time significantly (im using a faster model than GLM now, as it runs on my machine rather than a VM. It took as long as GLM did to deobfuscate 13.1, which is very good (as it is faster). I will re-test with GLM later. In a program which is doing math formulas that are predictable, I suspect we will see very good results.
+
+V1 is officially deprecated in favour of V1.2 (NOT V2).
+I decided to recode because codebase was deep fried. 
+V1.2 is a LOT better, we have configs, a better renamer, and it also creates a LOT of bloat which helps mess up AI's. (doubles file size sometimes)
