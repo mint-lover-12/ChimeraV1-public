@@ -36,3 +36,4 @@ The perfect Anti-AI obfuscator would trick it to pattern match the program into 
 V1 is officially deprecated in favour of V1.2 (NOT V2). If you want to view the V1 tests go into project history and go backwards (later than 24/07/26). 
 I decided to recode because codebase was deep fried. 
 V1.2 is a LOT better, we have configs, a better renamer, and it also creates a LOT of bloat which helps mess up AI's. (doubles file size sometimes)
+With V2, we see much better results. On the first tests, it took Deepseek V4 Flash ~28 minutes to deobfuscate. On the second, 60 (required two prompts). 
