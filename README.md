@@ -31,50 +31,8 @@ The perfect Anti-AI obfuscator would trick it to pattern match the program into 
 
 
 ## Notes
-#### all tests done on GLM 5.2, which is ~opus 4.8 -> fable 5 level
-This wont make sense to people who dont have the plan, and is mainly for me.
-Upon completing 13.1, the AI had to run the test file to be able to deobfuscate it, and took significantly more time than all of the previous tests. This is a ridiculous improvement, and it suggests that an entire anti-AI obfuscator is plausible and possible. The JAR runs very fast, and the AI seems to be struggling and potentially losing context. For reference, the JAR just does some math and prints it to the console! Upon partially deobfuscating it (23 minutes), it FAILED to correctly do it:
-
-  [FAIL] factorial(5) expected 24 but got 120
-  
-  [FAIL] factorial(10) expected 362880 but got 3628800   (as you can see, these are incorrect. This is because my factorial was offset, meaning that the AI tried to manually build a factorial function)
-  
-  [FAIL] megatest expected 2044257076 but got 833783078
-  
-  3 FAILED
 
 
-
-  This was actually pretty funny. 
-  It then attempted to fix it and got:
-  
-  [FAIL] sumTo(1) expected 1 but got 0
-  
-  [FAIL] sumTo(10) expected 55 but got 45
-
-  [FAIL] sumTo(100) expected 5050 but got 4950
-  
-  [FAIL] megatest expected 2044257076 but got 738442118
-  
-  4 FAILED
-
-  It took it about 27 minutes to deobfuscate, which is wonderful, as this is a tiny file and the obf isnt even fully finished! It also told me stuff was leaking into the constant pool which made it far easier to deobf.
-| Version | Runtime Required | Outcome |
-|---------|------------------|---------|
-| 12.0 |  No | Successfully deobfuscated |
-| 13.0 |  Yes | Successfully deobfuscated |
-| 13.1 |  Yes | Failed validation tests after ~27 minutes, had to manually reconstruct stuff |
-
-```mermaid
-xychart-beta
-    title "Approximate AI Deobfuscation Time"
-    x-axis "Chimera Version" ["12.0", "13.0", "13.1"]
-    y-axis "Minutes" 0 --> 30
-    line "GLM 5.2" [4, 12, 27]
-```
-
-Upon completing Stage 13 of the plan, we notice a change in AI movement. Rather than deobfuscating the file, it initially 'fakes' a deobfuscation, by messing with some code and saying its finished. It is still capable of partial deobfuscation, but it is much more resistant, which is interesting. I also made the tests so you are unable to reconstruct them easily, which has ramped up the time significantly (im using a faster model than GLM now, as it runs on my machine rather than a VM. It took as long as GLM did to deobfuscate 13.1, which is very good (as it is faster). I will re-test with GLM later. In a program which is doing math formulas that are predictable, I suspect we will see very good results.
-
-V1 is officially deprecated in favour of V1.2 (NOT V2).
+V1 is officially deprecated in favour of V1.2 (NOT V2). If you want to view the V1 tests go into project history and go backwards (later than 24/07/26). 
 I decided to recode because codebase was deep fried. 
 V1.2 is a LOT better, we have configs, a better renamer, and it also creates a LOT of bloat which helps mess up AI's. (doubles file size sometimes)
