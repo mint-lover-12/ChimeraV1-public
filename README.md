@@ -1,6 +1,6 @@
-# ChimeraV1-public
+# Chimera-public
 
-### Chimera V1 is a Java obfuscator designed to be resistant to AI-assisted deobfuscation.
+### Chimera is a Java obfuscator designed to be resistant to AI-assisted deobfuscation.
 
 ## The Problem
 
